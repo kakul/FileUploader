@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<script type="text/javascript" src="js/jquery.min.js">
+			</script>
+			<script type="text/javascript" src="js/jquery.form.js">
+			</script>
+			<script type="text/javascript" src="js/upload.js">
+			</script>
+			<link href="css/upload.css" rel="stylesheet" type="text/css">
+		</head>
+		<body>
+			<div id="uploadContainer">
+				<div align="center">
+					<form action="processUpload.php" onSubmit="return false" method="post" enctype="multipart/form-data" id="uploadForm">
+						<input name="upload" id="videoInput" type="file" accept="video/*"/>
+						<input type="submit" id="uploadBtn" value="Upload"/>
+						<img src="img/loader.gif" id="progressImg" style="display:none;" alt="Please Wait"/>
+					</form>
+					<div id="progressBox" style="display:none;">
+						<div id="progressBar">
+							<div id="statusText">0%
+							</div>
+						</div>
+					</div>
+					<div id="output"></div>
+				</div>
+			</div>
+		</body>
+	</html>
